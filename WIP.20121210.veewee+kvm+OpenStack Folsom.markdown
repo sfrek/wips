@@ -6,14 +6,15 @@ Para realizar la instalación me guío por un post de [Hendrik Volkmer][1], pero
 Levantar máquinas con [veewee][]
 --------------------------------
 
-El servidor de "virtualización" que uso corre una [Debian][5] [Wheezy][6], aunque supongo que se podrá usar cualquier "distro". 
-Para usar [veewee][] necesitamos [ruby][7], [rubygems][9], etc. En este caso no voy a usar ni [rvm][10], ni [rbenv][11], si no que tiro directamente de la paquetería:
+El servidor de "virtualización" que uso corre una [Debian][5] [Wheezy][6], aunque supongo que se podrá usar cualquier "distro".  
+Para usar [veewee][] necesitamos [ruby][7], [rubygems][9], etc. En este caso no voy a usar ni [rvm][10], ni [rbenv][11], si no que tiro directamente de la paquetería: 
 	kvm:~# gem --version
 	1.8.23
-Instalamos _veewee_:
+
+Instalamos _veewee_: 
 	gem install -y --no-rdoc --no-ri veewee veewee-templates-updater
 
-También necesitamos [ruby-libvirt][12] y [em-winrm][13]:
+También necesitamos [ruby-libvirt][12] y [em-winrm][13]: 
 	gem install -y --no-rdoc --no-ri ruby-libvirt
 	gem install -y --no-rdoc --no-ri em-winrm
 
@@ -24,13 +25,13 @@ También necesitamos [ruby-libvirt][12] y [em-winrm][13]:
 >	kvm:~/veewee/em-winrm# rake install
 
 
-Definimos la plantilla para las máquinas virtuales:
+Definimos la plantilla para las máquinas virtuales: 
 	kvm:~/.veewee# veewee kvm define 'veewee-precise64' 'ubuntu-12.04.1-server-amd64'
 	The basebox 'veewee-precise64' has been succesfully created from the template 'ubuntu-12.04.1-server-amd64'
 	You can now edit the definition files stored in definitions/veewee-precise64 or build the box with:
 	veewee kvm build 'veewee-precise64'
 
-Cambiamos parte de la definición:
+Cambiamos parte de la definición: 
 	kvm:~/.veewee/definitions/veewee-precise64# diff definition.rb.ini definition.rb
 	5c5
 	<   :disk_format => 'VDI',
@@ -43,7 +44,7 @@ Cambiamos parte de la definición:
 	>   :ssh_user => "operador",
 	>   :ssh_password => "operador",
 
-Añadimos y modificamos la configuración de instalación [preseed.cfg][15]:
+Añadimos y modificamos la configuración de instalación [preseed.cfg][15]: 
 	kvm:~/veewee/definitions/veewee-precise64# diff preseed.cfg.ini preseed.cfg
 	2c2
 	< d-i debian-installer/locale string en_US.utf8
