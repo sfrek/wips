@@ -3,11 +3,11 @@ OpenStack Folson en Ubuntu 12.04
 
 Para realizar la instalación me guío por un post de [Hendrik Volkmer][1], pero voy a usar [KVM][2] en vez de [VirtualBox][3], para ello me ayudaré de [veewee][4].
 
-Levantar máquinas con [veewee][]
+Levantar máquinas con [veewee][4]
 --------------------------------
 
 El servidor de "virtualización" que uso corre una [Debian][5] [Wheezy][6], aunque supongo que se podrá usar cualquier "distro".  
-Para usar [veewee][] necesitamos [ruby][7], [rubygems][9], etc. En este caso no voy a usar ni [rvm][10], ni [rbenv][11], si no que tiro directamente de la paquetería: 
+Para usar [veewee][4] necesitamos [ruby][7], [rubygems][9], etc. En este caso no voy a usar ni [rvm][10], ni [rbenv][11], si no que tiro directamente de la paquetería: 
 	kvm:~# gem --version
 	1.8.23
 
@@ -20,7 +20,7 @@ También necesitamos [ruby-libvirt][12] y [em-winrm][13]:
 	gem install -y --no-rdoc --no-ri ruby-libvirt
 	gem install -y --no-rdoc --no-ri em-winrm
 
-> ##### Error al instalar [em-winrm][]
+> ##### Error al instalar [em-winrm][13]
 
 > Me encuentro que al realizar un el _gem install_ del _em-winrm_ da un error al compilar, ya que instenta instalar [eventmachine][14]-1.0.0.beta3, al comprobar los repos, veo que la 1.0.0 ya no está en beta, la instalo con `gem install --no-rdoc --no-ri eventmachine`, y al intentar instalar de nuevo _em-winrm_ vuelve a dar el casque, claro es una dependencia directa, así que me voy al [GitHub]( https://github.com/schisamo/em-winrm ) de la gema, la descargo, cambio en _em-winrm.gemspec_ la dependecia de la beta3, y compilo e instalo: 
 >
@@ -91,9 +91,9 @@ En esencia, cambiamos:
 
 Por ahora no tira del todo como a mí me gustaría, he tenido que cambiar el directorio _veewee_ a `/opt/veewee` y crear el _pool_ `veewee-iso: /opt/veewee/iso` para las isos.
 
-Tampoco llega a cargar bien, ni el [preseed][], ni las opciones de creación de máquinas virtuales con kvm, ni la interfaz, etc...
+Tampoco llega a cargar bien, ni el [preseed][15], ni las opciones de creación de máquinas virtuales con kvm, ni la interfaz, etc...
 
-Voy descargar y debugear el `ruby-libvirt: git clone git://libvirt.org/ruby-libvirt.git`, sólo un día más con esto, si no tira lo dejo ... xDDDD ...
+Voy a descargar y debugear el `ruby-libvirt: git clone git://libvirt.org/ruby-libvirt.git`, sólo un día más con esto, si no tira lo dejo ... xDDDD ...
 
 [1]: http://blog.hendrikvolkmer.de/about
 [2]: http://www.linux-kvm.org/page/Main_Page
