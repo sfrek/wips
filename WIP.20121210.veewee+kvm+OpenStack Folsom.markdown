@@ -22,7 +22,8 @@ También necesitamos [ruby-libvirt][12] y [em-winrm][13]:
 
 > ##### Error al instalar [em-winrm][]
 
-> Me encuentro que al realizar un el _gem install_ del _em-winrm_ da un error al compilar, ya que instenta instalar [eventmachine][14]-1.0.0.beta3, al comprobar los repos, veo que la 1.0.0 ya no está en beta, la instalo con `gem install --no-rdoc --no-ri eventmachine`, y al intentar instalar de nuevo _em-winrm_ vuelve a dar el casque, claro es una dependencia directa, así que me voy al [GitHub]( https://github.com/schisamo/em-winrm ) de la gema, la descargo, cambio en _em-winrm.gemspec_ la dependecia de la beta3, y compilo e instalo:
+> Me encuentro que al realizar un el _gem install_ del _em-winrm_ da un error al compilar, ya que instenta instalar [eventmachine][14]-1.0.0.beta3, al comprobar los repos, veo que la 1.0.0 ya no está en beta, la instalo con `gem install --no-rdoc --no-ri eventmachine`, y al intentar instalar de nuevo _em-winrm_ vuelve a dar el casque, claro es una dependencia directa, así que me voy al [GitHub]( https://github.com/schisamo/em-winrm ) de la gema, la descargo, cambio en _em-winrm.gemspec_ la dependecia de la beta3, y compilo e instalo: 
+
 >	kvm:~/veewee/em-winrm# bundle package
 >	kvm:~/veewee/em-winrm# rake install
 
@@ -86,6 +87,9 @@ En esencia, cambiamos:
 * IP.
 
 
+###### Actualizo status...
+
+Por ahora no tira del todo como a mí me gustaría, he tenido que cambiar el directorio _veewee_ a `/opt/veewee` y crear el _pool_ `veewee-iso: /opt/veewee/iso` para las isos.
 
 [1]: http://blog.hendrikvolkmer.de/about
 [2]: http://www.linux-kvm.org/page/Main_Page
