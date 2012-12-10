@@ -12,9 +12,11 @@ Para usar [veewee][] necesitamos [ruby][7], [rubygems][9], etc. En este caso no 
 	1.8.23
 
 Instalamos _veewee_: 
+
 	gem install -y --no-rdoc --no-ri veewee veewee-templates-updater
 
 También necesitamos [ruby-libvirt][12] y [em-winrm][13]: 
+
 	gem install -y --no-rdoc --no-ri ruby-libvirt
 	gem install -y --no-rdoc --no-ri em-winrm
 
@@ -83,3 +85,18 @@ En esencia, cambiamos:
 
 
 [1]: http://blog.hendrikvolkmer.de/about/
+[2]:
+[3]:
+[4]:
+[5]:
+[6]:
+[7]:
+[8]:
+[9]:
+[10]:
+[11]:
+[12]:
+[13]:
+[14]:
+[15]:
+
