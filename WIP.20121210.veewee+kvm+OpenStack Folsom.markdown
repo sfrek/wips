@@ -28,12 +28,14 @@ También necesitamos [ruby-libvirt][12] y [em-winrm][13]:
 
 
 Definimos la plantilla para las máquinas virtuales: 
+
 	kvm:~/.veewee# veewee kvm define 'veewee-precise64' 'ubuntu-12.04.1-server-amd64'
 	The basebox 'veewee-precise64' has been succesfully created from the template 'ubuntu-12.04.1-server-amd64'
 	You can now edit the definition files stored in definitions/veewee-precise64 or build the box with:
 	veewee kvm build 'veewee-precise64'
 
 Cambiamos parte de la definición: 
+
 	kvm:~/.veewee/definitions/veewee-precise64# diff definition.rb.ini definition.rb
 	5c5
 	<   :disk_format => 'VDI',
@@ -46,7 +48,8 @@ Cambiamos parte de la definición:
 	>   :ssh_user => "operador",
 	>   :ssh_password => "operador",
 
-Añadimos y modificamos la configuración de instalación [preseed.cfg][15]: 
+Añadimos y modificamos la configuración de instalación [preseed][15].cfg: 
+
 	kvm:~/veewee/definitions/veewee-precise64# diff preseed.cfg.ini preseed.cfg
 	2c2
 	< d-i debian-installer/locale string en_US.utf8
@@ -84,19 +87,18 @@ En esencia, cambiamos:
 
 
 
-[1]: http://blog.hendrikvolkmer.de/about/
-[2]:
-[3]:
-[4]:
-[5]:
-[6]:
-[7]:
-[8]:
-[9]:
-[10]:
-[11]:
-[12]:
-[13]:
-[14]:
-[15]:
+[1]: http://blog.hendrikvolkmer.de/about
+[2]: http://www.linux-kvm.org/page/Main_Page
+[3]: https://www.virtualbox.org/
+[4]: https://github.com/jedi4ever/veewee
+[5]: http://www.debian.org/
+[6]: http://www.debian.org/releases/wheezy/
+[7]: http://www.ruby-lang.org/es/
+[9]: http://rubygems.org/
+[10]: https://rvm.io/
+[11]: https://github.com/sstephenson/rbenv
+[12]: http://libvirt.org/ruby/
+[13]: https://github.com/schisamo/em-winrm
+[14]: http://rubyeventmachine.com/
+[15]: http://wiki.debian.org/DebianInstaller/Preseed
 
