@@ -1,0 +1,301 @@
+Uploading vcap_memcached             [1.0.0]
+Uploaded 1 cookbook.
+Uploading vcap_imagemagick             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_rabbitmq             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_elasticsearch             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_neo4j             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_service_lifecycle             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_dea             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_stager             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_health_manager             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_tomcat             [0.0.0]
+ERROR: Cookbook vcap_tomcat depends on cookbook java version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_redis             [1.0.0]
+ERROR: Cookbook vcap_redis depends on cookbook backup version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_erlang             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_router             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_cloudfoundry             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_mysql             [0.0.1]
+ERROR: Cookbook vcap_mysql depends on cookbook backup version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_uaadb             [0.0.1]
+ERROR: Cookbook vcap_uaadb depends on cookbook postgresql version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_nginx             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_couchdb             [1.0.0]
+Uploaded 1 cookbook.
+Uploading vcap_deployment             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_python             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_acmdb             [0.0.1]
+ERROR: Cookbook vcap_acmdb depends on cookbook postgresql version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_echo             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_vblob             [0.0.1]
+ERROR: Cookbook vcap_vblob depends on cookbook node version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_service_broker             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_java             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_ccdb             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_maven             [0.10.0]
+ERROR: Cookbook vcap_maven depends on cookbook java version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_cloud_controller             [0.0.1]
+ERROR: Cookbook vcap_cloud_controller depends on cookbook service_lifecycle version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_uaa             [0.0.1]
+ERROR: Cookbook vcap_uaa depends on cookbook uaadb version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_mongodb             [0.0.1]
+ERROR: Cookbook vcap_mongodb depends on cookbook backup version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_acm             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_backup             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_nats_server             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_php             [1.0.0]
+Uploaded 1 cookbook.
+Uploading vcap_filesystem             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_postgresql             [0.0.1]
+ERROR: Cookbook vcap_postgresql depends on cookbook backup version >= 0.0.0,
+ERROR: which is not currently being uploaded and cannot be found on the server.
+Uploading vcap_ruby             [1.0.0]
+Uploaded 1 cookbook.
+Uploading vcap_java7             [0.0.1]
+Uploaded 1 cookbook.
+Uploading vcap_node             [0.0.3]
+Uploaded 1 cookbook.
+Uploading vcap_essentials             [0.0.1]
+Uploaded 1 cookbook.
+
+
+
+
+
+
+
+
+
+
+
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: Run List is [role[basic_on_debian_and_ubuntu], role[vcap_nats_server_on_lucid]]
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: Run List expands to [rsyslog, resolver, apt, vcap_deployment, vcap_essentials, vcap_ruby, vcap_nats_server]
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: HTTP Request Returned 404 Not Found: No routes match the request: /reports/nodes/lucid-nats/runs
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: Starting Chef Run for lucid-nats
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: Running start handlers
+[Fri, 26 Oct 2012 13:06:04 +0200] INFO: Start handlers complete.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Loading cookbooks [apt, resolver, rsyslog, vcap_deployment, vcap_essentials, vcap_nats_server, vcap_ruby]
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_essentials/recipes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_essentials/metadata.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_essentials/README.rdoc in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/recipes/ruby18.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/recipes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/libraries/ruby_install.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/attributes/ruby18.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/attributes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/metadata.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/metadata.json in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_ruby/README.rdoc in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_nats_server/recipes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_nats_server/attributes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_nats_server/metadata.rb in the cache.
+[Fri, 26 Oct 2012 13:06:05 +0200] INFO: Storing updated cookbooks/vcap_nats_server/README.rdoc in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/resources/remote_file.rb in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/providers/remote_file.rb in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/recipes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/attributes/default.rb in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/metadata.rb in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] INFO: Storing updated cookbooks/vcap_deployment/README.rdoc in the cache.
+[Fri, 26 Oct 2012 13:06:06 +0200] ERROR: Running exception handlers
+[Fri, 26 Oct 2012 13:06:06 +0200] FATAL: Saving node information to /var/cache/chef/failed-run-data.json
+[Fri, 26 Oct 2012 13:06:06 +0200] ERROR: Exception handlers complete
+[Fri, 26 Oct 2012 13:06:06 +0200] ERROR: LoadError: no such file to load -- blobstore_client
+[Fri, 26 Oct 2012 13:06:06 +0200] FATAL: Stacktrace dumped to /var/cache/chef/chef-stacktrace.out
+[Fri, 26 Oct 2012 13:06:06 +0200] ERROR: Sleeping for 1800 seconds before trying again
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------- Creado el cookbook ----------------
+
+[Sat, 27 Oct 2012 15:37:23 +0200] INFO: *** Chef 10.16.0 ***
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Run List is [role[basic_on_debian_and_ubuntu], recipe[vcap_prerequisites]]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Run List expands to [rsyslog, resolver, apt, vcap_prerequisites]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: HTTP Request Returned 404 Not Found: No routes match the request: /reports/nodes/lucid-nats/runs
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Starting Chef Run for lucid-nats
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Running start handlers
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Start handlers complete.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Loading cookbooks [apt, resolver, rsyslog, vcap_prerequisites]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/metadata.json from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/libraries/ruby_install.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/recipes/ruby18.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/attributes/ruby18.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/providers/remote_file.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/resources/remote_file.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/recipes/default.rb in the cache.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/README.md in the cache.
+[Sat, 27 Oct 2012 15:37:25 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/metadata.rb in the cache.
+[Sat, 27 Oct 2012 15:37:25 +0200] INFO: Processing package[rsyslog] action install (rsyslog::default line 32)
+[Sat, 27 Oct 2012 15:37:26 +0200] INFO: Processing cookbook_file[/etc/default/rsyslog] action create (rsyslog::default line 36)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing directory[/etc/rsyslog.d] action create (rsyslog::default line 43)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing directory[/var/spool/rsyslog] action create (rsyslog::default line 49)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing template[/etc/rsyslog.conf] action create (rsyslog::default line 55)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing template[/etc/rsyslog.d/50-default.conf] action create (rsyslog::default line 65)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing service[rsyslog] action enable (rsyslog::default line 74)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing service[rsyslog] action start (rsyslog::default line 74)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing template[/etc/resolv.conf] action create (resolver::default line 27)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get-update] action run (apt::default line 22)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get update] action nothing (apt::default line 29)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[update-notifier-common] action install (apt::default line 36)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get-update-periodic] action run (apt::default line 40)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing directory[/var/cache/local] action create (apt::default line 50)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing directory[/var/cache/local/preseeding] action create (apt::default line 50)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[ruby] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[ruby-dev] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:49 +0200] INFO: Processing package[libopenssl-ruby] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:55 +0200] INFO: Processing package[rdoc] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:05 +0200] INFO: Processing package[ri] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:47 +0200] INFO: Processing package[irb] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:56 +0200] INFO: Processing package[build-essential] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:58 +0200] INFO: Processing package[ssl-cert] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:39:06 +0200] INFO: Processing package[wget] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: Processing bash[install rubygems if it's necesary] action run (vcap_prerequisites::default line 20)
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: bash[install rubygems if it's necesary] ran successfully
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: Processing bash[install blobstore_client] action run (vcap_prerequisites::default line 40)
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Running exception handlers
+[Sat, 27 Oct 2012 15:41:05 +0200] FATAL: Saving node information to /var/cache/chef/failed-run-data.json
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Exception handlers complete
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Mixlib::ShellOut::ShellCommandFailed: bash[install blobstore_client] (vcap_prerequisites::default line 40) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" ----
+STDOUT: false
+STDERR: ERROR:  Error installing blobstore_client:
+	multi_json requires RubyGems version >= 1.3.6
+---- End output of "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" ----
+Ran "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" returned 1
+[Sat, 27 Oct 2012 15:41:05 +0200] FATAL: Stacktrace dumped to /var/cache/chef/chef-stacktrace.out
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Sleeping for 1800 seconds before trying again
+[Sat, 27 Oct 2012 15:37:23 +0200] INFO: *** Chef 10.16.0 ***
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Run List is [role[basic_on_debian_and_ubuntu], recipe[vcap_prerequisites]]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Run List expands to [rsyslog, resolver, apt, vcap_prerequisites]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: HTTP Request Returned 404 Not Found: No routes match the request: /reports/nodes/lucid-nats/runs
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Starting Chef Run for lucid-nats
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Running start handlers
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Start handlers complete.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Loading cookbooks [apt, resolver, rsyslog, vcap_prerequisites]
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/metadata.json from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/libraries/ruby_install.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/recipes/ruby18.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/attributes/ruby18.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_ruby/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_essentials/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/providers/remote_file.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/resources/remote_file.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_deployment/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/README.rdoc from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/metadata.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/recipes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Removing cookbooks/vcap_nats_server/attributes/default.rb from the cache; its cookbook is no longer needed on this client.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/recipes/default.rb in the cache.
+[Sat, 27 Oct 2012 15:37:24 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/README.md in the cache.
+[Sat, 27 Oct 2012 15:37:25 +0200] INFO: Storing updated cookbooks/vcap_prerequisites/metadata.rb in the cache.
+[Sat, 27 Oct 2012 15:37:25 +0200] INFO: Processing package[rsyslog] action install (rsyslog::default line 32)
+[Sat, 27 Oct 2012 15:37:26 +0200] INFO: Processing cookbook_file[/etc/default/rsyslog] action create (rsyslog::default line 36)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing directory[/etc/rsyslog.d] action create (rsyslog::default line 43)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing directory[/var/spool/rsyslog] action create (rsyslog::default line 49)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing template[/etc/rsyslog.conf] action create (rsyslog::default line 55)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing template[/etc/rsyslog.d/50-default.conf] action create (rsyslog::default line 65)
+[Sat, 27 Oct 2012 15:37:27 +0200] INFO: Processing service[rsyslog] action enable (rsyslog::default line 74)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing service[rsyslog] action start (rsyslog::default line 74)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing template[/etc/resolv.conf] action create (resolver::default line 27)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get-update] action run (apt::default line 22)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get update] action nothing (apt::default line 29)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[update-notifier-common] action install (apt::default line 36)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing execute[apt-get-update-periodic] action run (apt::default line 40)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing directory[/var/cache/local] action create (apt::default line 50)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing directory[/var/cache/local/preseeding] action create (apt::default line 50)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[ruby] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:28 +0200] INFO: Processing package[ruby-dev] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:49 +0200] INFO: Processing package[libopenssl-ruby] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:37:55 +0200] INFO: Processing package[rdoc] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:05 +0200] INFO: Processing package[ri] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:47 +0200] INFO: Processing package[irb] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:56 +0200] INFO: Processing package[build-essential] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:38:58 +0200] INFO: Processing package[ssl-cert] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:39:06 +0200] INFO: Processing package[wget] action install (vcap_prerequisites::default line 16)
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: Processing bash[install rubygems if it's necesary] action run (vcap_prerequisites::default line 20)
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: bash[install rubygems if it's necesary] ran successfully
+[Sat, 27 Oct 2012 15:39:08 +0200] INFO: Processing bash[install blobstore_client] action run (vcap_prerequisites::default line 40)
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Running exception handlers
+[Sat, 27 Oct 2012 15:41:05 +0200] FATAL: Saving node information to /var/cache/chef/failed-run-data.json
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Exception handlers complete
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Mixlib::ShellOut::ShellCommandFailed: bash[install blobstore_client] (vcap_prerequisites::default line 40) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" ----
+STDOUT: false
+STDERR: ERROR:  Error installing blobstore_client:
+	multi_json requires RubyGems version >= 1.3.6
+---- End output of "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" ----
+Ran "bash"  "/tmp/chef-script20121027-11516-1k33te5-0" returned 1
+[Sat, 27 Oct 2012 15:41:05 +0200] FATAL: Stacktrace dumped to /var/cache/chef/chef-stacktrace.out
+[Sat, 27 Oct 2012 15:41:05 +0200] ERROR: Sleeping for 1800 seconds before trying again
+
+
+
+

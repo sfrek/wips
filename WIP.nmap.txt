@@ -1,0 +1,32 @@
+7041  nmap -p T:1-65000,U:1-65000 -sS -sT -sA localhost
+ 7042  nmap -p T:1-65000,U:1-65000 -sS  localhost
+ 7043  nmap -p T:1-65000,U:1-65000 -sT  localhost
+ 7044  nmap -p T:1-65000,U:1-65000 -sA  localhost
+ 7045  nmap -p T:1-65000,U:1-65000 -sC  localhost
+ 7046  nmap -p T:1-65000,U:1-65000 -sC localhost
+ 7047  nmap -p T:1-65000,U:1-65000 -sC moya.abadasoft.com
+ 7048  nmap -h
+ 7049  nmap -p T:1-65000,U:1-65000 -sC -sX moya.abadasoft.com
+ 7050  nmap -p T:1-65000,U:1-65000 -sC -sX -sV moya.abadasoft.com
+ 7051  nmap -p T:1-65000,U:1-65000 -sC -sX -sV 172.16.100.0/24
+ 7052  nmap -p T:1-65000,U:1-65000 -sC -sX -sV 172.16.100.112
+ 7322  nmap -h
+ 7323  nmap -
+ 7386  nmap --help
+ 7543  history nmap
+ 7544  history | grep nmap
+ 7545  nmap -p T:1-65000,U:1-65000 -sC -sX -sV 172.16.100.0/24
+ 7546  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 172.16.100.0/24
+ 7547  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ -sO 172.16.100.0/24
+ 7548  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 172.16.100.0/24
+ 7550  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 192.168.111.1/24
+ 7551  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 192.168.111.0/24
+ 7552  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ moya.abadasoft.com
+ 7553  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ diablo.abadasoft.com
+ 7554  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 192.168.111.0/24
+ 7556  nmap -p T:1-65000,U:1-65000 -sC -sX -sV -sZ 10.11.12.0/24
+ 7557  nmap -p T:1-65000,U:1-65000 -sC -sX -sV 10.11.12.0/24
+ 7558  nmap -p T:1-65000,U:1-65000 -A -sC -sX -sV 10.11.12.0/24
+ 7559  nmap -p T:1-65000,U:1-65000 -A -sC -sX -sV --script exploit 10.11.12.0/24
+ 7560  nmap -p T:1-65000,U:1-65000 -A -sC -sX -sV --version-all --script exploit 10.11.12.0/24
+

@@ -1,0 +1,115 @@
+Instalación de CloundFoundry a través de chef en ubuntu server lucid ( 10.04 LTS hasta 2015 )
+=============================================================================================
+
+Chef server.
+------------
+
+En una ubuntu server precise ( 12.04 LTS ), siguiendo la documentación oficial:
+http://wiki.opscode.com/display/chef/Installing+Chef+Server+on+Debian+or+Ubuntu+using+Packages
+
+Clientes.
+---------
+
+Para poder instalar el chef-client correcto hemos de insertar el repositorio de opscode, por lo tanto, lo suyo es seguir, como no, la docu oficial:
+http://wiki.opscode.com/display/chef/Installing+Chef+Client+on+Ubuntu+or+Debian
+
+++Añadir nodo a chefserver++
+----------------------------
+
+Dentro de "chef-server" con el "usuario/cliente" creado:
+knife bootstrap 172.16.0.193 --ssh-user operador --distro ubuntu10.04-apt --sudo --environment cloudfoundry_on_lucid-server --verbose
+
+Esto instala la paquetería de chef-client en el nodo 172.16.0.193 y ejecuta el chef-client ...
+
+
+++Gorrinada que he tenido que hacer para tunear todos los nodos+++
+-----------------------------------------------------------------
+Un ejemplo con el nodo "lucid-router"
+
+kvm:~# virsh domblklist ubuntu.lucid.router
+Target     Source
+------------------------------------------------
+vda        /var/lib/libvirt/images/lucyd.amd64.server.swap-clone-2.img
+vdb        /var/lib/libvirt/images/lucyd.amd64.server.raiz-clone-2.img
+hdc        -
+
+vm:~# qemu-nbd -v /var/lib/libvirt/images/lucyd.amd64.server.raiz-clone-2.img --connect=/dev/nbd0 &
+[1] 23982
+kvm:~# NBD device /dev/nbd0 is now connected to /var/lib/libvirt/images/lucyd.amd64.server.raiz-clone-2.img
+
+kvm:~# mount /dev/nbd0p1 /mnt/
+kvm:~# cd /mnt/
+kvm:/mnt# vim etc/hosts
+kvm:/mnt# vim etc/resolv.conf 
+kvm:/mnt# vim etc/network/interfaces 
+kvm:/mnt# cd
+kvm:~# umount -v /mnt 
+/dev/nbd0p1 has been unmounted
+kvm:~# kill -9 23982
+kvm:~# virsh edit ubuntu.lucid.router ( nPaaS to br0 )
+kvm:~# virsh start ubuntu.lucid.router
+
+
+
+++CookBook++
+------------
+
+El de apt
+
+figarcia@corelia ~ $ knife cookbook site download apt
+Downloading apt from the cookbooks site at version 1.4.8 to /home/figarcia/apt-1.4.8.tar.gz
+Cookbook saved: /home/figarcia/apt-1.4.8.tar.gz
+
+figarcia@corelia ~ $ knife cookbook site install apt
+Installing apt to /home/figarcia/.chef/chef-repo/cookbooks
+Checking out the master branch.
+Creating pristine copy branch chef-vendor-apt
+Downloading apt from the cookbooks site at version 1.4.8 to /home/figarcia/.chef/chef-repo/cookbooks/apt.tar.gz
+Cookbook saved: /home/figarcia/.chef/chef-repo/cookbooks/apt.tar.gz
+Removing pre-existing version.
+Uncompressing apt version 1.4.8.
+removing downloaded tarball
+1 files updated, committing changes
+Creating tag cookbook-site-imported-apt-1.4.8
+Checking out the master branch.
+Updating 8cfac10..d297a86
+Fast-forward
+ cookbooks/apt/.gitignore                      |    4 ++++
+ cookbooks/apt/CHANGELOG.md                    |   25 +++++++++++++++++++++++
+ cookbooks/apt/CONTRIBUTING                    |   29 +++++++++++++++++++++++++++
+ cookbooks/apt/Gemfile                         |    3 +++
+ cookbooks/apt/LICENSE                         |  201 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/README.md                       |  190 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/files/default/apt-proxy-v2.conf |   50 ++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/metadata.json                   |   34 +++++++++++++++++++++++++++++++
+ cookbooks/apt/metadata.rb                     |   13 ++++++++++++
+ cookbooks/apt/providers/preference.rb         |   52 ++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/providers/repository.rb         |  127 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/recipes/cacher-client.rb        |   53 +++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/recipes/cacher-ng.rb            |   30 ++++++++++++++++++++++++++++
+ cookbooks/apt/recipes/default.rb              |   56 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ cookbooks/apt/resources/preference.rb         |   29 +++++++++++++++++++++++++++
+ cookbooks/apt/resources/repository.rb         |   36 +++++++++++++++++++++++++++++++++
+ 16 files changed, 932 insertions(+)
+ create mode 100644 cookbooks/apt/.gitignore
+ create mode 100644 cookbooks/apt/CHANGELOG.md
+ create mode 100644 cookbooks/apt/CONTRIBUTING
+ create mode 100644 cookbooks/apt/Gemfile
+ create mode 100644 cookbooks/apt/LICENSE
+ create mode 100644 cookbooks/apt/README.md
+ create mode 100644 cookbooks/apt/files/default/apt-proxy-v2.conf
+ create mode 100644 cookbooks/apt/metadata.json
+ create mode 100644 cookbooks/apt/metadata.rb
+ create mode 100644 cookbooks/apt/providers/preference.rb
+ create mode 100644 cookbooks/apt/providers/repository.rb
+ create mode 100644 cookbooks/apt/recipes/cacher-client.rb
+ create mode 100644 cookbooks/apt/recipes/cacher-ng.rb
+ create mode 100644 cookbooks/apt/recipes/default.rb
+ create mode 100644 cookbooks/apt/resources/preference.rb
+ create mode 100644 cookbooks/apt/resources/repository.rb
+Cookbook apt version 1.4.8 successfully installed
+
+figarcia@corelia ~ $ knife cookbook upload apt
+Uploading apt             [1.4.8]
+Uploaded 1 cookbook.
+
