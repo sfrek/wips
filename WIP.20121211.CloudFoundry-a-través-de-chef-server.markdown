@@ -3,7 +3,7 @@ CloudFoundry a través de chef server
 
 `figarcia@corelia ~/src/andreacampi $ git clone git://github.com/andreacampi/cloudfoundry-vagrant.git`
 
-* Descargar los _cookbooks_ a través de [librarian][]-chef: 
+Descargar los _cookbooks_ a través de [librarian][]-chef: 
 
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ librarian-chef install
 	Installing apt (1.5.0)
@@ -33,7 +33,7 @@ CloudFoundry a través de chef server
 	Installing nats (1.0.0)
 	Installing redisio (1.1.0)
 
-* Desplegar rolles en el Chef Server:
+Desplegar rolles en el Chef Server:
 
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ knife cookbook upload --all --cookbook-path ./cookbooks/
 	Uploading apt            [1.5.0]
@@ -65,7 +65,7 @@ CloudFoundry a través de chef server
 	Uploaded all cookbooks.
 
 
-* Crear roles: 
+Crear roles: 
 
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ knife role from file ./roles/*.json
 	Updated Role cloudfoundry_cc_postgresql_server!
@@ -81,7 +81,7 @@ CloudFoundry a través de chef server
 	Updated Role cloudfoundry_stager!
 
 
-* Desde el chefserver: 
+Desde el chefserver: 
 
 	operador@ubuntu:~$ knife bootstrap 172.16.0.90 -x operador -P operador --sudo
 	Bootstrapping Chef on 172.16.0.90
@@ -113,3 +113,4 @@ CloudFoundry a través de chef server
 	172.16.0.90 
 
 
+[librarian]:	https://github.com/applicationsonline/librarian
