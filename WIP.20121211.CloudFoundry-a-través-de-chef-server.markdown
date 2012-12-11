@@ -5,7 +5,6 @@ CloudFoundry a través de chef server
 
 * Descargar los _cookbooks_ a través de [librarian][]-chef: 
 
-	{% codeblock %}
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ librarian-chef install
 	Installing apt (1.5.0)
 	Installing aws (0.100.2)
@@ -33,11 +32,9 @@ CloudFoundry a través de chef server
 	Installing cloudfoundry-stager (1.0.0)
 	Installing nats (1.0.0)
 	Installing redisio (1.1.0)
-	{% endcodeblock %}
 
 * Desplegar rolles en el Chef Server:
 
-	{% codeblock %}
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ knife cookbook upload --all --cookbook-path ./cookbooks/
 	Uploading apt            [1.5.0]
 	Uploading aws            [0.100.2]
@@ -66,12 +63,10 @@ CloudFoundry a través de chef server
 	Uploading xfs            [1.0.0]
 	Uploading yum            [2.0.2]
 	Uploaded all cookbooks.
-	{% endcodeblock %}
 
 
-* Crear roles:
+* Crear roles: 
 
-	{% codeblock %}
 	figarcia@corelia ~/src/andreacampi/cloudfoundry-vagrant/chef $ knife role from file ./roles/*.json
 	Updated Role cloudfoundry_cc_postgresql_server!
 	Updated Role cloudfoundry_cloud_controller!
@@ -84,10 +79,9 @@ CloudFoundry a través de chef server
 	Updated Role cloudfoundry_ruby_runtime_1_9_2!
 	Updated Role cloudfoundry-single-node!
 	Updated Role cloudfoundry_stager!
-	{% endcodeblock %}
 
 
-* Desde el chefserver:
+* Desde el chefserver: 
 
 	operador@ubuntu:~$ knife bootstrap 172.16.0.90 -x operador -P operador --sudo
 	Bootstrapping Chef on 172.16.0.90
