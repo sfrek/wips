@@ -113,4 +113,13 @@ Desde el chefserver:
 	172.16.0.90 
 
 
+eeeeeeeeeeee:
+
+          "postgresql": {
+                  "config": {
+                          "listen_addresses": "node[:ipaddress]"
+                  } 
+          }
+
+
 [librarian]:	https://github.com/applicationsonline/librarian
