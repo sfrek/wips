@@ -113,13 +113,44 @@ Desde el chefserver:
 	172.16.0.90 
 
 
-eeeeeeeeeeee:
+rol prueba_aio_postgresql:
 
-          "postgresql": {
-                  "config": {
-                          "listen_addresses": "node[:ipaddress]"
-                  } 
-          }
+	{
+	  "name": "prueba_aio_postgresql",
+	  "description": "",
+	  "json_class": "Chef::Role",
+	  "default_attributes": {
+	  },
+	  "override_attributes": {
+	    "postgresql": {
+	      "config": {
+		"listen_addresses": "postgresql-server.paasaio.local"
+	      }
+	    }
+	  },
+	  "chef_type": "role",
+	  "run_list": [
+	    "role[cloudfoundry_cc_postgresql_server]"
+	  ],
+	  "env_run_lists": {
+	  }
+	}
 
+
+rol para CC, los override_attributes:
+
+"cloudfoundry_cloud_controller": {
+	"database": {
+		"host": "postgresql-server.paasaio.local"
+	}
+	"server": {
+		"domain": "paasaio.local",
+		"admins": "sistemas@abadasoft.com"
+	}
+	"stager": {
+		"user": "userStager",
+		"password": "passwordStager"
+	}
+}
 
 [librarian]:	https://github.com/applicationsonline/librarian
