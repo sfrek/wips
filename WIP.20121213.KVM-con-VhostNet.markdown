@@ -1,7 +1,7 @@
 Mejora de Redimiento en _KVM_ con _VhostNet_
 ============================================
 
-[kvm][] [VhostNet[]
+[kvm][] [VhostNet][]
 
 * Activar el modulo _vhost_net_:
 
