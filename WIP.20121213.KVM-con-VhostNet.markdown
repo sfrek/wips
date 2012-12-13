@@ -5,6 +5,13 @@ Mejora de Redimiento en _KVM_ con _VhostNet_
 
 * Activar el modulo _vhost_net_:
 
+```
+root@moya ~ # modprobe -v vhost_net
+insmod /lib/modules/3.2.0-4-amd64/kernel/drivers/net/macvlan.ko 
+insmod /lib/modules/3.2.0-4-amd64/kernel/drivers/net/macvtap.ko 
+insmod /lib/modules/3.2.0-4-amd64/kernel/drivers/vhost/vhost_net.ko 
+```
+
 * Configurar la máquina virtual, a través de `virsh edit`:
 
 ```XML

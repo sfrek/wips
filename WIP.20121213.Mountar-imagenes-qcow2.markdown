@@ -5,21 +5,21 @@ Editar/modificar archivos y/o cofiguraciones de una máquina virtual _[kvm][]+[q
 
 Para esto, lo primero que tenemos que comprobar es que nuestro sistema tenga el módulo [nbd][] cargado, `lsmod | grep nbd`, si no se tiene:
 
-``` terminal
-root@moya ~ # modprobe -v nbd
+```
+root@kvm ~ # modprobe -v nbd
 insmod /lib/modules/3.2.0-4-amd64/kernel/drivers/block/nbd.ko
 ```
 
 Una vez tengamos dicho módulo, lo único que tenemos que hacer es convertir la imagen _[qcow2][]_ que queramos usar en un dispositivo de bloques, para ello usamos [qemu-nbd][]:
 
-``` terminal
-root@moya ~ # qemu-nbd -v /var/lib/libvirt/images/<imagen-qcow2>.img --connect=/dev/nbd0 &
+```
+root@kvm ~ # qemu-nbd -v /var/lib/libvirt/images/precise.PostGRESQL_CC.PaaS.img --connect=/dev/nbd0 &
 ```
 
 Comprobamos las particiones y seleccionamos aquella que queramos montar:
 
-``` terminal
-root@moya ~ # fdisk -l /dev/nbd0
+```
+root@kvm ~ # fdisk -l /dev/nbd0
 
 Disk /dev/nbd0: 10.7 GB, 10737418240 bytes
 255 heads, 63 sectors/track, 1305 cylinders, total 20971520 sectors
@@ -33,9 +33,18 @@ Disk identifier: 0x00044215
 /dev/nbd0p2         2000896    20969471     9484288   83  Linux
 ```
 
-``` terminal
+```
+mount /dev/nbd0p2 /mnt/
+```
+
+Una vez acabas de tocar los ficheros que quieres:
+
+```
+qemu-nbd --disconnect /dev/nbd0
 ```
 
 [kvm]: http://www.linux-kvm.org/page/Main_Page
+[nbd]: http://nbd.sourceforge.net/
 [qemu-nbd]: http://wiki.qemu.org/Features/Asynchronous_NBD
+[qcow2]: http://www.linux-kvm.org/page/Qcow2
 
