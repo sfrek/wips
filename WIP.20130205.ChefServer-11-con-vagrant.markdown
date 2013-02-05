@@ -6,6 +6,7 @@ usar [vagrant][], claro que [opscode][] pone en el
 ## Testing
 
 * Descargamos el repositorio:
+
 ```
 figarcia@corelia:~/src$ git clone
 git://github.com/opscode-cookbooks/chef-server.git
@@ -17,12 +18,17 @@ Receiving objects: 100% (460/460), 87.39 KiB | 134 KiB/s, done.
 Resolving deltas: 100% (233/233), done.
 figarcia@corelia:~/src$ cd chef-server
 ``` 
+
 * Antes de lanzar el `bundle install`, y como hago uso de [rvm][] me creo un
   fichero _.rvmrc_ con un entorno cerrado:
-  ```
-  figarcia@corelia:~/src/chef-server$ cat .rvmrc
-  ```
+
+```
+figarcia@corelia:~/src/chef-server$ cat .rvmrc
+rvm use ruby-1.9.3@chef-server --create
+```
+
 * Instalamos las _gemas_ necesarias:
+
 ```
 figarcia@corelia:~/src/chef-server$ bundle install
 Fetching gem metadata from http://rubygems.org/........
@@ -86,7 +92,9 @@ Using bundler (1.2.0)
 Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem
 is installed.
 ```
+
 * Ahora ya estamos preparados para lanzar el _vagrant_:
+
 ```
 figarcia@corelia:~/src/chef-server$ vagrant up
 [default] Box opscode-ubuntu-12.04 was not found. Fetching box from specified
@@ -195,7 +203,9 @@ API FQDN] action create (chef-server::default line 85)
 [2013-02-05T10:48:37+00:00] INFO: Running report handlers
 [2013-02-05T10:48:37+00:00] INFO: Report handlers complete
 ```
+
 * Comprobamos que está arriba y funcional:
+
 
 ```
 figarcia@corelia:~/src/chef-server$ curl -k https://33.33.33.10/version
@@ -233,4 +243,4 @@ unicorn                 4.2.0
 version-manifest        11.0.4
 ```
 
-En teoría ya está, ahora solo falta hacer uso de él, pero 
+Hemos levantado un _Chef Server 11_ en un _tris_.
