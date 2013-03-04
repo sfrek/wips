@@ -17,7 +17,23 @@ Como [bosh-bootstrap][] hace uso de [fog][],  configuro _~/fog_ para que haga us
    :libvirt_uri: qemu:///system
 ```
 
+Haciendo uso de un [entorno rvm][] aislado, instalamos a través de `gem install`
+
+```
+deployer@debvirt:~$ gem install bosh-bootstrap ruby-libvirt
+```
+Comprobamos la conexión al [hypervisor][]
+
+``` ruby
+deployer@debvirt:~$ fog
+  Welcome to fog interactive!
+    :default provides Libvirt
+    >> Compute[:libvirt]
+    #<Fog::Compute::Libvirt::Real:9352480 @uri=#<Fog::Compute::LibvirtUtil::URI:0x000000011d5a00 @parsed_uri=#<URI::Generic:0x000000011d4df8 URL:qemu:/system>, @uri="qemu:///system"> @ip_command=nil @client=#<Libvirt::Connect:0x000000019465c8>>
+```
 
 [bosh-bootstrap]: https://github.com/StarkAndWayne/bosh-bootstrap#readme
 [fog]: https://github.com/fog/fog#readme
 [kvm]: http://www.linux-kvm.org/page/Main_Page
+[hypervisor]: http://en.wikipedia.org/wiki/Hypervisor
+[entorno rvm]: http://sfrek.github.com/blog/2013/02/06/entornos-com-rvm/
