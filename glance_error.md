@@ -297,5 +297,18 @@ ClientException: The server has either erred or is incapable of performing the r
 ERROR: The server has either erred or is incapable of performing the requested operation. (HTTP 500) (Request-ID: req-0d4640c3-5a09-4de3-81c6-4d66675fece4)
 ```
 
+* Para que todo vuelva a su ser y borrar todas las variables de entorno meto un __reboot__ al _controller_ y al _storage_ `...`
+
+```
+root@controller01:~# nova image-list
++--------------------------------------+--------------+--------+--------+
+| ID                                   | Name         | Status | Server |
++--------------------------------------+--------------+--------+--------+
+| acd2be5a-b741-4639-ad5f-a575d27c5695 | myFirstImage | ACTIVE |        |
++--------------------------------------+--------------+--------+--------+
+```
+
+El error era mucho más básico de lo que me temía, bueno, ahora a ver si tira.
+
 
 

@@ -341,7 +341,23 @@ root@controller01:~# nova --no-cache secgroup-add-rule default tcp 22 22 0.0.0.0
 ```
 
 * Necesito _id_ de la imagen a levantar: __acd2be5a-b741-4639-ad5f-a575d27c5695__
+** Para obtener dicho _id_:
 
+```
+root@controller01:~# source demoUno.rc 
+root@controller01:~# glance index
+ID                                   Name                           Disk Format          Container Format     Size          
+------------------------------------ ------------------------------ -------------------- -------------------- --------------
+acd2be5a-b741-4639-ad5f-a575d27c5695 myFirstImage                   qcow2                bare                        9761280
+root@controller01:~# nova image-list
++--------------------------------------+--------------+--------+--------+
+| ID                                   | Name         | Status | Server |
++--------------------------------------+--------------+--------+--------+
+| acd2be5a-b741-4639-ad5f-a575d27c5695 | myFirstImage | ACTIVE |        |
++--------------------------------------+--------------+--------+--------+
+```
+
+* Lanzamos la nueva instancia:
 
 ```
 nova --no-cache boot --image acd2be5a-b741-4639-ad5f-a575d27c5695 --flavor 1 my_first_vm
