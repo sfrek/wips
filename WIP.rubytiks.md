@@ -16,5 +16,5 @@ s = Gem::Specification.load("bosh_kvm_cpi.gemspec")
 # Now, we create a Gem::Builder object
 g = Gem::Builder.new(s)
 # And then, we build the gem 
-g = build
+g.build
 ```
